@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="One of the best way to practice your frontendmentor">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | E-commerce product page</title>
@@ -12,7 +13,8 @@
       text-align: center; 
     }
     .attribution a { 
-      color: hsl(228, 45%, 44%); 
+      color: var(--Orange); 
+      text-decoration: none;
     }
   </style>
 </head>
@@ -20,7 +22,10 @@
 <main>
   
     <header>
-      <img src="images/logo.svg" alt="Logo Brand">
+      <div class="logoimg">
+        <img class="menu" width="20" height="15" src="images/icon-menu.svg" alt="icon-menu">
+        <img class="logo" width="138" height="20" src="images/logo.svg" alt="Logo Brand">
+      </div>
       <nav>
         <a href="#">Collections</a>
         <a href="#">Men</a>
@@ -28,7 +33,10 @@
         <a href="#">About</a>
         <a href="#">Contact</a>
       </nav>
-  
+      <div class="rightimgs">
+        <img class="cart" width="22" height="20" src="images/icon-cart.svg" alt="icon-cart">
+        <img class="avatar" width="100" height="100" src="images/image-avatar.png" alt="image-avatar">
+      </div>
     </header>
   <section>
     <div class="left">
@@ -46,23 +54,26 @@
     
         <h2>Fall Limited Edition Sneakers</h2>
     
-        <p>
+        <p class="these">
           These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they’ll withstand everything the weather can offer.
         </p>
     
-        <div>
-          <p>$125.00</p>
-          <p>50%</p>
-        </div>
-        <p>$250.00</p>
-    
-        <div>
-          <img src="images/icon-minus.svg" alt="icon-minus">
-          <p>0</p>
-          <img src="images/icon-plus.svg" alt="icon-minus">
-          <button>
-            <img src="images/icon-cart.svg" alt="">
+        <div class="price">
+          <div class="priceinside">
+            <p class="onetwofive">$125.00</p>
+            <p class="fifty">50%</p>
+          </div>
+        <p class="twofivezero">$250.00</p>
+    </div>
+        <div class="simbols">
+          <div class="simbols2">
+            <img class="minus" width="12" height="4" src="images/icon-minus.svg" alt="icon-minus">
+            <p class="zero">0</p>
+            <img class="plus" width="12" height="12" src="images/icon-plus.svg" alt="icon-minus">
+          </div>
+          <button class="button">
+            <img width="15" height="16" src="images/icon-cart-white.svg" alt="icon-cart">
             Add to cart
           </button>
         </div>
