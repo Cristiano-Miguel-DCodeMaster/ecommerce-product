@@ -44,6 +44,7 @@ main {
 		justify-content: space-between;
         background-color: var(--White);
         padding: 12px;
+        padding-bottom: 16px;
         width: 95%;
         align-items: center;
 	}
@@ -76,8 +77,8 @@ main {
         padding-bottom: 4px;
     }
     .menu{
-        width: 17px;
-        height: 15px;
+        width: 13px;
+        height: 10px;
     }
     .cart{
         width: 17px;
@@ -98,6 +99,19 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+    .menumobile{
+        display: none;
+    }
+    .menumobile img{
+        padding-bottom: 10px;
+    }
+    .menumobile a{
+        text-decoration: none;
+        color:black;
+        opacity: 90%;
+        font-weight: 600;
+        font-size: 14px;
     }
     .left{
         width: 100%;
@@ -188,11 +202,15 @@ main {
         background-color: var(--Orange);
         color: var(--White);
         border:none;
-        padding: 10px;
+        padding: 12px;
         border-radius: 4px;
-        gap: 10px;
+        gap: 8px;
         font-weight: 600;
         font-size: 12px;
+        box-shadow: 5px 10px 10px 10px var(--Paleorange);
+    }
+    footer{
+        padding-top: 20px;
     }
 }
 @media only screen and (min-width: 992px) {
