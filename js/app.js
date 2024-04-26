@@ -19,3 +19,26 @@ close.addEventListener('click', () => {
     const menumobile = document.querySelector('.menumobile');
     menumobile.style.display = "none";
 })
+var cartcounter = 0;
+const cart = document.querySelector('.cart');
+cart.addEventListener('click', () => {
+    cartcounter++;
+    if (!(cartcounter%2) == 0) {
+        const basket = document.querySelector('.basket');
+        basket.style.display = "flex";
+        basket.style.flexDirection = "column";
+        basket.style.justifyContent = "center";
+        basket.style.width = "85%";
+        basket.style.gap = "18px";
+        basket.style.height = "fit-content";
+        basket.style.backgroundColor = "white";
+        basket.style.position = "absolute";
+        basket.style.padding = "13px";
+        basket.style.paddingTop = "20px";
+        basket.style.paddingBottom = "20px";
+        basket.style.borderRadius = "6px";
+    } else {
+        const basket = document.querySelector('.basket');
+        basket.style.display = "none";
+    }
+})

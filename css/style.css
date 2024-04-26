@@ -208,6 +208,62 @@ main {
         font-weight: 600;
         font-size: 12px;
         box-shadow: 5px 10px 10px 10px var(--Paleorange);
+        cursor: pointer;
+    }
+    .thumbnail1{
+        width: 40px;
+        height: 40px;
+    }
+    .middle{
+        display: flex;
+        flex-direction: column;
+    }
+    .numbers{
+        display: flex;
+        gap: 5px;
+    }
+    .basket{
+        display: none;
+    }
+    .baskettitle{
+        text-align: left;
+        padding-bottom: 0px;
+    }
+    .basketdata{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        color: var(--Darkgrayishblue);
+        border-top: 1px solid var(--Grayishblue);
+        padding-top: 15px;
+    }
+    .fall{
+        font-size: 14px;
+    }
+    .numbers p{
+        font-size: 13px;
+    }
+    .result{
+        color: black;
+        font-weight: 600;
+    }
+    .left{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .basket button{
+        background-color: var(--Orange);
+        color: var(--White);
+        border: none;
+        padding: 10px;
+        border-radius: 3px;
+        font-weight: 600;
+        cursor: pointer;
     }
     footer{
         padding-top: 20px;
