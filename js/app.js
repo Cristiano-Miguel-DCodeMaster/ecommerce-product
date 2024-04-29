@@ -15,6 +15,7 @@ menu.addEventListener('click', () => {
     menumobile.style.gap = "10px";
     const that = document.querySelector('.that');
     that.style.display = "block";
+    next.style.backgroundColor = "rgba(255,255,255,0.514)";
 })
 const close = document.querySelector('.close');
 close.addEventListener('click', () => {
@@ -22,6 +23,7 @@ close.addEventListener('click', () => {
     menumobile.style.display = "none";
     const that = document.querySelector('.that');
     that.style.display = "none";
+    next.style.backgroundColor = "white";
 })
 var cartcounter = 0;
 const cart = document.querySelector('.cart');
@@ -68,18 +70,60 @@ avatar.addEventListener('click', () => {
         basket.style.display = "none";
     }
 });
+var bgcounter = 0;
+const bigimage = document.querySelector('.bigimage'); 
+const previous = document.querySelector('.previous');
+const next = document.querySelector('.next');
+next
+    .addEventListener('click',
+        () => {
+            if (bgcounter == 0) {
+                bigimage.style.backgroundImage = "url(/images/image-product-2.webp)";
+                bgcounter++;
+            } else if( bgcounter == 1){
+                bigimage.style.backgroundImage = "url(/images/image-product-3.webp)";
+                bgcounter++;
+            } else if( bgcounter == 2){
+                bigimage.style.backgroundImage = "url(/images/image-product-4.webp)";
+            }
+        })
+previous
+    .addEventListener('click',
+        () => {
+            if (bgcounter == 2) {
+                bigimage.style.backgroundImage = "url(/images/image-product-3.webp)";
+                bgcounter--;
+        } else if (bgcounter == 1) {
+                bigimage.style.backgroundImage = "url(/images/image-product-2.webp)";
+                bgcounter--;
+            } else  if( bgcounter == 0){
+                bigimage.style.backgroundImage = "url(/images/image-product-1.webp)";
+            }
+        })
+
 const minus = document.querySelector('.minus');
 const plus = document.querySelector('.plus');
 const zero = document.querySelector('.zero');
 zero.innerHTML = cartcounter;
 
 minus.addEventListener('click', () => {
-    cartcounter--;
-    zero.innerHTML = cartcounter;
-    const onetwofive = document.querySelector('.onetwofive');
-    onetwofive.innerHTML = "$"+(125*cartcounter)+".00";
-    const twofivezero = document.querySelector('.twofivezero');
-    twofivezero.innerHTML = "$"+(250*cartcounter)+".00";
+    if (cartcounter == 0) {
+        alert('Select a number');
+    } else if (cartcounter == 1) {
+        cartcounter--;
+        zero.innerHTML = "0";
+        const onetwofive = document.querySelector('.onetwofive');
+        onetwofive.innerHTML = "$" + (125 * 1) + ".00";
+        const twofivezero = document.querySelector('.twofivezero');
+        twofivezero.innerHTML = "$" + (250 * 1) + ".00";
+    } else {
+        cartcounter--;
+        zero.innerHTML = cartcounter;
+        const onetwofive = document.querySelector('.onetwofive');
+        onetwofive.innerHTML = "$" + (125 * cartcounter) + ".00";
+        const twofivezero = document.querySelector('.twofivezero');
+        twofivezero.innerHTML = "$" + (250 * cartcounter) + ".00";
+    }
 })
 
 plus.addEventListener('click', () => {
