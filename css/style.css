@@ -39,11 +39,20 @@ main {
     font-family: kumbh;
     src: url(/fonts/KumbhSans[YOPQ\,wght].ttf);
 }
+.that{
+    width: 100%;
+    height: 150vh;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    display: none;
+}
 @media only screen and (min-width: 320px) {
 	header {
 		justify-content: space-between;
         background-color: var(--White);
         padding: 12px;
+        padding-top: 20px;
         padding-bottom: 16px;
         width: 95%;
         align-items: center;
