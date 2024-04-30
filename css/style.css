@@ -81,6 +81,7 @@ main {
         padding-bottom: 16px;
         width: 92%;
         align-items: center;
+        z-index: 1;
 	}
 	nav {
 		display: none;
@@ -117,6 +118,21 @@ main {
     .cart{
         width: 17px;
         height: 17px;
+    }
+    .cart-top-result{
+        position: absolute;
+        font-size: 7px;
+        top: 20%;
+        right: 16%;
+        background-color: var(--Orange);
+        padding: 2px;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        border-radius: 100vmax;
+        color: var(--White);
+        display: none;
     }
     .smallimages{
         border: 2px solid;
@@ -261,14 +277,12 @@ main {
         gap: 5px;
     }
     .basket{
-        border: 2px solid red;
-        height: 25px;
-        width: 100%;
+        display: block;
     }
     .baskettitle{
         text-align: left;
-        padding-bottom: 15px;
-        border-bottom: 1px solid var(--Darkgrayishblue);
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--Grayishblue);
     }
 .empty-message{
     color: var(--Darkgrayishblue);
@@ -279,9 +293,8 @@ main {
         gap: 10px;
         align-items: center;
         color: var(--Darkgrayishblue);
-        border-top: 1px solid var(--Grayishblue);
-        padding-top: 15px;
-        display: none;
+        padding-top: 25px;
+        padding-bottom: 15px;
     }
     .fall{
         font-size: 14px;

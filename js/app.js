@@ -28,6 +28,7 @@ close.addEventListener('click', () => {
 var cartcounter = 0;
 const cart = document.querySelector('.cart');
 const avatar = document.querySelector('.avatar');
+const cartTopResult = document.querySelector('.cart-top-result');
 cart.addEventListener('click', () => {
     cartcounter++;
     if (!(cartcounter % 2) == 0) {
@@ -44,6 +45,10 @@ cart.addEventListener('click', () => {
         basket.style.paddingTop = "20px";
         basket.style.paddingBottom = "20px";
         basket.style.borderRadius = "6px";
+        if (itemnumber == 0) {
+            cartTopResult.style.display = "block";
+            cartTopResult.innerHTML = itemnumber;
+        }
     } else {
         const basket = document.querySelector('.basket');
         basket.style.display = "none";
@@ -65,6 +70,10 @@ avatar.addEventListener('click', () => {
         basket.style.paddingTop = "20px";
         basket.style.paddingBottom = "20px";
         basket.style.borderRadius = "6px";
+        if (itemnumber == 0) {
+            cartTopResult.style.display = "block";
+            cartTopResult.innerHTML = itemnumber;
+        }
     } else {
         const basket = document.querySelector('.basket');
         basket.style.display = "none";
@@ -121,7 +130,8 @@ minus.addEventListener('click', () => {
         const N2 = document.querySelector('.N2');
 N2.innerHTML = itemnumber;
     const result = document.querySelector('.result');
-result.innerHTML = "$"+itemnumber*125+".00";
+        result.innerHTML = "$" + itemnumber * 125 + ".00";
+        cartTopResult.innerHTML = itemnumber;
     } else {
         itemnumber--;
         zero.innerHTML = itemnumber;
@@ -132,7 +142,8 @@ result.innerHTML = "$"+itemnumber*125+".00";
         const N2 = document.querySelector('.N2');
 N2.innerHTML = itemnumber;
     const result = document.querySelector('.result');
-result.innerHTML = "$"+itemnumber*125+".00";
+        result.innerHTML = "$" + itemnumber * 125 + ".00";
+        cartTopResult.innerHTML = itemnumber;
     }
 })
 
@@ -147,5 +158,9 @@ plus.addEventListener('click', () => {
     const N2 = document.querySelector('.N2');
 N2.innerHTML = itemnumber;
     const result = document.querySelector('.result');
-result.innerHTML = "$"+itemnumber*125+".00";
-})
+    result.innerHTML = "$" + itemnumber * 125 + ".00";
+    if (itemnumber >= 1) {
+        cartTopResult.style.display = "block";
+        cartTopResult.innerHTML = itemnumber;
+    }
+    })
