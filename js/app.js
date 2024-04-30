@@ -106,31 +106,46 @@ const plus = document.querySelector('.plus');
 const zero = document.querySelector('.zero');
 zero.innerHTML = cartcounter;
 
+var itemnumber = 0;
 minus.addEventListener('click', () => {
-    if (cartcounter == 0) {
+    if (itemnumber == 0) {
         alert('Select a number');
-    } else if (cartcounter == 1) {
-        cartcounter--;
+    } else if (itemnumber == 1) {
+        itemnumber--;
         zero.innerHTML = "0";
         const onetwofive = document.querySelector('.onetwofive');
         onetwofive.innerHTML = "$" + (125 * 1) + ".00";
         const twofivezero = document.querySelector('.twofivezero');
         twofivezero.innerHTML = "$" + (250 * 1) + ".00";
+
+        const N2 = document.querySelector('.N2');
+N2.innerHTML = itemnumber;
+    const result = document.querySelector('.result');
+result.innerHTML = "$"+itemnumber*125+".00";
     } else {
-        cartcounter--;
-        zero.innerHTML = cartcounter;
+        itemnumber--;
+        zero.innerHTML = itemnumber;
         const onetwofive = document.querySelector('.onetwofive');
-        onetwofive.innerHTML = "$" + (125 * cartcounter) + ".00";
+        onetwofive.innerHTML = "$" + (125 * itemnumber) + ".00";
         const twofivezero = document.querySelector('.twofivezero');
-        twofivezero.innerHTML = "$" + (250 * cartcounter) + ".00";
+        twofivezero.innerHTML = "$" + (250 * itemnumber) + ".00";
+        const N2 = document.querySelector('.N2');
+N2.innerHTML = itemnumber;
+    const result = document.querySelector('.result');
+result.innerHTML = "$"+itemnumber*125+".00";
     }
 })
 
 plus.addEventListener('click', () => {
-    cartcounter++;
-    zero.innerHTML = cartcounter;
+    itemnumber++;
+    zero.innerHTML = itemnumber;
     const onetwofive = document.querySelector('.onetwofive');
-    onetwofive.innerHTML = "$"+(125*cartcounter)+".00";
+    onetwofive.innerHTML = "$"+(125*itemnumber)+".00";
     const twofivezero = document.querySelector('.twofivezero');
-    twofivezero.innerHTML = "$"+(250*cartcounter)+".00";
+    twofivezero.innerHTML = "$"+(250*itemnumber)+".00";
+
+    const N2 = document.querySelector('.N2');
+N2.innerHTML = itemnumber;
+    const result = document.querySelector('.result');
+result.innerHTML = "$"+itemnumber*125+".00";
 })

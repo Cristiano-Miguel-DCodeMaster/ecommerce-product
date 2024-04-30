@@ -79,7 +79,7 @@ main {
         padding: 12px;
         padding-top: 20px;
         padding-bottom: 16px;
-        width: 95%;
+        width: 92%;
         align-items: center;
 	}
 	nav {
@@ -125,6 +125,7 @@ main {
     }
     .smallimages img{
         width: 20px;
+        cursor: pointer;
     }
     section{
         display: flex;
@@ -157,7 +158,7 @@ main {
         background-size: cover;
     }
     .sectas{
-        top: 35%;
+        top: 38%;
     }
     .right{
         width: 90%;
@@ -260,12 +261,18 @@ main {
         gap: 5px;
     }
     .basket{
-        display: none;
+        border: 2px solid red;
+        height: 25px;
+        width: 100%;
     }
     .baskettitle{
         text-align: left;
-        padding-bottom: 0px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--Darkgrayishblue);
     }
+.empty-message{
+    color: var(--Darkgrayishblue);
+}
     .basketdata{
         display: flex;
         justify-content: center;
@@ -274,6 +281,7 @@ main {
         color: var(--Darkgrayishblue);
         border-top: 1px solid var(--Grayishblue);
         padding-top: 15px;
+        display: none;
     }
     .fall{
         font-size: 14px;
@@ -286,7 +294,6 @@ main {
         font-weight: 600;
     }
     .left{
-        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -301,6 +308,7 @@ main {
         border-radius: 3px;
         font-weight: 600;
         cursor: pointer;
+        display: none;
     }
     footer{
         padding-top: 20px;
@@ -313,4 +321,7 @@ main {
 	nav {
 		display: block;
 	}
+    .smallimages{
+        display: block;
+    }
 }
