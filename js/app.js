@@ -217,9 +217,16 @@ button.addEventListener('click', () => {
         alert('Select a number, please')
     }
     if (itemnumber >= 1) {
+        const emptyMessage = document.querySelector('.empty-message');
+        emptyMessage.style.display = "none";
         cartTopResult.style.display = "block";
         cartTopResult.innerHTML = itemnumber;
         const basketdata = document.querySelector('.basketdata');
         basketdata.style.display = "block";
+        basketdata.style.display = "flex";
+        const checa = document.querySelector('.checa');
+        checa.style.display = "block";
+        const basket = document.querySelector('.basket');
+        basket.style.paddingBottom = "15px";
     }
 })
