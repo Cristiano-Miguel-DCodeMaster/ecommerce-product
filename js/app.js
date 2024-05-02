@@ -48,6 +48,23 @@ cart.addEventListener('click', () => {
         if (itemnumber == 0) {
             cartTopResult.style.display = "block";
             cartTopResult.innerHTML = itemnumber;
+            const basketdata = document.querySelector('.basketdata');
+            basketdata.style.display = "none";
+            basket.style.height = "fit-content";
+            basket.style.paddingBottom = "80px";
+            const checa = document.querySelector('.checa');
+            checa.style.display = "none";
+            const emptyMessage = document.querySelector('.empty-message');
+            emptyMessage.style.display = "block";
+        } else {
+            const basketdata = document.querySelector('.basketdata');
+            basketdata.style.display = "block";
+            basketdata.style.display = "flex";
+            basket.style.height = "fit-content";
+            const checa = document.querySelector('.checa');
+            checa.style.display = "block";
+            const emptyMessage = document.querySelector('.empty-message');
+            emptyMessage.style.display = "none";
         }
     } else {
         const basket = document.querySelector('.basket');
@@ -73,10 +90,29 @@ avatar.addEventListener('click', () => {
         if (itemnumber == 0) {
             cartTopResult.style.display = "block";
             cartTopResult.innerHTML = itemnumber;
+            const basketdata = document.querySelector('.basketdata');
+            basketdata.style.display = "none";
+            basket.style.height = "fit-content";
+            basket.style.paddingBottom = "80px";
+            const checa = document.querySelector('.checa');
+            checa.style.display = "none";
+            const emptyMessage = document.querySelector('.empty-message');
+            emptyMessage.style.display = "block";
+        } else {
+            const basketdata = document.querySelector('.basketdata');
+            basketdata.style.display = "block";
+            basketdata.style.display = "flex";
+            basket.style.height = "fit-content";
+            const checa = document.querySelector('.checa');
+            checa.style.display = "block";
+            const emptyMessage = document.querySelector('.empty-message');
+            emptyMessage.style.display = "none";
         }
     } else {
         const basket = document.querySelector('.basket');
         basket.style.display = "none";
+        const basketdata = document.querySelector('.basketdata');
+            basketdata.style.display = "block";
     }
 });
 var bgcounter = 0;
@@ -110,6 +146,20 @@ previous
             }
         })
 
+const baskettrash = document.querySelector('.baskettrash');
+baskettrash.addEventListener('click', () => {
+    const basketdata = document.querySelector('.basketdata');
+    basketdata.style.display = "none";
+    const checa = document.querySelector('.checa');
+    checa.style.display = "none";
+    const emptyMessage = document.querySelector('.empty-message');
+    emptyMessage.style.display = "block";
+    const basket = document.querySelector('.basket');
+    basket.style.paddingBottom = "80px";
+    const cartTopResult = document.querySelector('.cart-top-result');
+    cartTopResult.innerHTML = 0;
+})
+
 const minus = document.querySelector('.minus');
 const plus = document.querySelector('.plus');
 const zero = document.querySelector('.zero');
@@ -118,7 +168,7 @@ zero.innerHTML = cartcounter;
 var itemnumber = 0;
 minus.addEventListener('click', () => {
     if (itemnumber == 0) {
-        alert('Select a number');
+        alert('Select a number, please');
     } else if (itemnumber == 1) {
         itemnumber--;
         zero.innerHTML = "0";
@@ -143,7 +193,6 @@ N2.innerHTML = itemnumber;
 N2.innerHTML = itemnumber;
     const result = document.querySelector('.result');
         result.innerHTML = "$" + itemnumber * 125 + ".00";
-        cartTopResult.innerHTML = itemnumber;
     }
 })
 
@@ -159,8 +208,18 @@ plus.addEventListener('click', () => {
 N2.innerHTML = itemnumber;
     const result = document.querySelector('.result');
     result.innerHTML = "$" + itemnumber * 125 + ".00";
+    
+})
+    
+const button = document.querySelector('.button');
+button.addEventListener('click', () => {
+    if (itemnumber == 0) {
+        alert('Select a number, please')
+    }
     if (itemnumber >= 1) {
         cartTopResult.style.display = "block";
         cartTopResult.innerHTML = itemnumber;
+        const basketdata = document.querySelector('.basketdata');
+        basketdata.style.display = "block";
     }
-    })
+})
