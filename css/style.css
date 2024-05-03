@@ -795,58 +795,69 @@ main {
 }
 @media only screen and (min-width: 992px) {
 	header {
-		width: 100%;
+		width: 85%;
 	}
 	.menu {
 		display: none;
+	}
+	.logo{
+		width: 138px;
 	}
 	nav {
 		display: block;
 	}
 	section {
-        width: 60%;
+		height: 80vh;
+		width: 80%;
 		flex-direction: row;
-        gap: 20px;
+		gap: 55px;
+		border: 2px SOLID RED;
 	}
-    .left{
-        border:2px solid red;
-        width: 50%;
-        height: 60vh;
-    }
-    .bigimage{
-        height: 90vh;
-        background-position: center;
-        background-repeat: no-repeat;
-        border: 2px solid red;
-    }
+	.left {
+		width: 50%;
+		height: 65vh;
+		border-radius: 12px
+	}
+	.bigimage {
+		border-radius: 12px;
+		height: 90vh;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 	.smallimages {
 		display: block;
-        width: 100%;
-        padding-top: 5px;
+		width: 100%;
+		padding-top: 10px;
+		border: 2px solid red;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
 	}
-    .smallimages img{
-        width: 50px;
-        border-radius: 8px;
-    }
-    .right{
-        border: 2px solid red;
-    }
-    .simbols{
-        flex-direction: row;
-        width: 100%;
-        border: 2px solid red;
-        justify-content:space-around;
-    }
-    .sectas{
-        display: none;
-    }
-    h1 {
+	.smallimages img {
+		width: 60px;
+		border-radius: 8px;
+	}
+	.right {
+		border: 2px solid red;
+	}
+	.simbols {
+		flex-direction: row;
+		width: 100%;
+		border: 2px solid red;
+		justify-content: space-around;
+	}
+	.sectas {
+		display: none;
+	}
+	h1 {
 		font-size: 15px;
 	}
 	h2 {
 		font-size: 33px;
-        border: 2px solid red;
-        width: 80%;
+		border: 2px solid red;
+		width: 80%;
 	}
 	.these {
 		font-size: 16px;
