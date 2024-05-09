@@ -45,7 +45,7 @@ cart.addEventListener('click', () => {
         basket.style.paddingTop = "20px";
         basket.style.paddingBottom = "20px";
         basket.style.borderRadius = "6px";
-        if (itemnumber == 0) {
+        if (itemnumber == 0 ) {
             cartTopResult.style.display = "block";
             cartTopResult.innerHTML = itemnumber;
             const basketdata = document.querySelector('.basketdata');
@@ -189,10 +189,6 @@ N2.innerHTML = itemnumber;
         onetwofive.innerHTML = "$" + (125 * itemnumber) + ".00";
         const twofivezero = document.querySelector('.twofivezero');
         twofivezero.innerHTML = "$" + (250 * itemnumber) + ".00";
-        const N2 = document.querySelector('.N2');
-N2.innerHTML = itemnumber;
-    const result = document.querySelector('.result');
-        result.innerHTML = "$" + itemnumber * 125 + ".00";
     }
 })
 
@@ -203,12 +199,6 @@ plus.addEventListener('click', () => {
     onetwofive.innerHTML = "$"+(125*itemnumber)+".00";
     const twofivezero = document.querySelector('.twofivezero');
     twofivezero.innerHTML = "$"+(250*itemnumber)+".00";
-
-    const N2 = document.querySelector('.N2');
-N2.innerHTML = itemnumber;
-    const result = document.querySelector('.result');
-    result.innerHTML = "$" + itemnumber * 125 + ".00";
-    
 })
     
 const button = document.querySelector('.button');
@@ -228,5 +218,10 @@ button.addEventListener('click', () => {
         checa.style.display = "block";
         const basket = document.querySelector('.basket');
         basket.style.paddingBottom = "15px";
+
+        const N2 = document.querySelector('.N2');
+N2.innerHTML = itemnumber;
+    const result = document.querySelector('.result');
+        result.innerHTML = "$" + itemnumber * 125 + ".00";
     }
 })

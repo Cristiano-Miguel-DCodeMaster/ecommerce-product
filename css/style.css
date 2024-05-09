@@ -401,7 +401,6 @@ main {
 		display: none;
 	}
 	.smallimages {
-		border: 2px solid;
 		display: flex;
 		display: none;
 	}
@@ -440,7 +439,7 @@ main {
 		background-size: cover;
 	}
 	.sectas {
-		top: 38%;
+		top: 33%;
 	}
 	.right {
 		width: 90%;
@@ -780,7 +779,27 @@ main {
 	}
 }
 @media only screen and (min-width:414px) and (min-height:600px){
-
+	.avatar {
+		width: 28px;
+		height: 28px;
+	}
+	.logo {
+		width: 120px;
+		height: 3vh;
+	}
+	.cart-top-result {
+		right: 14%;
+		font-size: 10px;
+	}
+	.bigimage {
+		height: 60vh;
+	}
+	.sectas {
+		top: 38%;
+	}
+	h1 {
+		font-size: 15px;
+	}
 }
 @media only screen and (min-width: 425px) {
 	.logo {
@@ -800,6 +819,9 @@ main {
 	}
 	.bigimage {
 		height: 70vh;
+	}
+	.sectas{
+		top: 45%;
 	}
 	h1 {
 		font-size: 17px;
@@ -924,6 +946,10 @@ main {
 	}
 	.logo{
 		width: 138px;
+		cursor: pointer;
+	}
+	.avatar,.cart{
+		cursor: pointer;
 	}
 	nav {
 		display: block;
@@ -933,10 +959,9 @@ main {
 		width: 80%;
 		flex-direction: row;
 		gap: 55px;
-		border: 2px SOLID RED;
 	}
 	.left {
-		width: 50%;
+		width: 65%;
 		height: 65vh;
 		border-radius: 12px
 	}
@@ -951,7 +976,6 @@ main {
 		display: block;
 		width: 100%;
 		padding-top: 10px;
-		border: 2px solid red;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -961,14 +985,19 @@ main {
 		width: 60px;
 		border-radius: 8px;
 	}
-	.right {
-		border: 2px solid red;
+	.smallimages .sneaker1{
+		opacity: 0.7;
+		border: 3px solid var(--Orange);
 	}
 	.simbols {
 		flex-direction: row;
 		width: 100%;
-		border: 2px solid red;
 		justify-content: space-around;
+		gap: 2px;
+		padding-top: 20px;
+	}
+	.simbols2{
+		width: 35%;
 	}
 	.sectas {
 		display: none;
@@ -978,7 +1007,6 @@ main {
 	}
 	h2 {
 		font-size: 33px;
-		border: 2px solid red;
 		width: 80%;
 	}
 	.these {
@@ -989,13 +1017,25 @@ main {
 	}
 	.fifty {
 		font-size: 17px;
+		background-color: var(--Paleorange);
+		padding: 5px;
+		color: var(--Orange);
+		border-radius: 5px;
 	}
 	.twofivezero {
-		font-size: 18px;
+		font-size: 16px;
+		color: var(--Darkgrayishblue);
+		text-decoration: line-through;
+	}
+	.price{
+		flex-direction: column;
+		justify-content: start;
+		align-items: start;
 	}
 	.minus,
 	.plus {
 		width: 15px;
+		cursor: pointer;
 	}
 	.zero {
 		font-size: 20px;
@@ -1003,6 +1043,7 @@ main {
 	.button {
 		padding: 15px;
 		font-size: 18px;
+		width: 55%;
 	}
 	.button img {
 		width: 20px;
