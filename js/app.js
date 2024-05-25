@@ -225,3 +225,35 @@ N2.innerHTML = itemnumber;
         result.innerHTML = "$" + itemnumber * 125 + ".00";
     }
 })
+const sneaker1 = document.querySelector('.sneaker1');
+sneaker1.addEventListener('click', () => {
+    bigimage.style.backgroundImage = "url(images/image-product-1.webp)";
+    sneaker2.classList.remove('sneaker1');
+    sneaker3.classList.remove('sneaker1');
+    sneaker4.classList.remove('sneaker1');
+    sneaker1.classList.add('sneaker1');
+})
+const sneaker2 = document.querySelector('.sneaker2');
+sneaker2.addEventListener('click', () => {
+    bigimage.style.backgroundImage = "url(images/image-product-2.webp)";
+    sneaker1.classList.remove('sneaker1');
+    sneaker3.classList.remove('sneaker1');
+    sneaker4.classList.remove('sneaker1');
+    sneaker2.classList.add('sneaker1');
+})
+const sneaker3 = document.querySelector('.sneaker3');
+sneaker3.addEventListener('click', () => {
+    bigimage.style.backgroundImage = "url(images/image-product-3.webp)";
+    sneaker1.classList.remove('sneaker1');
+    sneaker2.classList.remove('sneaker1');
+    sneaker4.classList.remove('sneaker1');
+    sneaker3.classList.add('sneaker1');
+})
+const sneaker4 = document.querySelector('.sneaker4');
+sneaker4.addEventListener('click', () => {
+    bigimage.style.backgroundImage = "url(images/image-product-4.webp)";
+    sneaker1.classList.remove('sneaker1');
+    sneaker2.classList.remove('sneaker1');
+    sneaker3.classList.remove('sneaker1');
+    sneaker4.classList.add('sneaker1');
+})
