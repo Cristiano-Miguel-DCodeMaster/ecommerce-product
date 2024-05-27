@@ -1092,6 +1092,9 @@ main {
 	.menu {
 		display: none;
 	}
+	.isso{
+		gap: 80px;
+	}
 	.logo{
 		width: 170px;
 		cursor: pointer;
@@ -1197,5 +1200,11 @@ main {
 	.button img {
 		width: 20px;
 		height: 21px;
+	}
+}
+@media only screen and (min-width:1272px) and (min-height:800px){
+	.left {
+		width: 60%;
+		height: 60vh;
 	}
 }
