@@ -36,7 +36,12 @@ cart.addEventListener('click', () => {
         basket.style.display = "flex";
         basket.style.flexDirection = "column";
         basket.style.justifyContent = "center";
-        basket.style.width = "85%";
+        if (innerWidth >= 992) {
+            const basket = document.querySelector('.basket');
+            basket.style.width = "30%";
+        } else if (innerWidth < 992) {
+            basket.style.width = "85%";
+        }
         basket.style.gap = "18px";
         basket.style.height = "fit-content";
         basket.style.backgroundColor = "white";
@@ -78,7 +83,12 @@ avatar.addEventListener('click', () => {
         basket.style.display = "flex";
         basket.style.flexDirection = "column";
         basket.style.justifyContent = "center";
-        basket.style.width = "85%";
+        if (innerWidth >= 992) {
+            const basket = document.querySelector('.basket');
+            basket.style.width = "30%";
+        } else if (innerWidth < 992) {
+            basket.style.width = "85%";
+        }
         basket.style.gap = "18px";
         basket.style.height = "fit-content";
         basket.style.backgroundColor = "white";
@@ -257,3 +267,12 @@ sneaker4.addEventListener('click', () => {
     sneaker3.classList.remove('sneaker1');
     sneaker4.classList.add('sneaker1');
 })
+document.querySelector('a')
+    .addEventListener('mouseover', () => { 
+const nav = document.querySelector('a');
+nav.style.marginTop = "26px";
+nav.style.borderBottom = "2px solid red";
+nav.style.paddingBottom = "25px";
+    }
+)
+
