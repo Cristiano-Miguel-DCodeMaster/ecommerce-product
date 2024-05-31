@@ -267,12 +267,4 @@ sneaker4.addEventListener('click', () => {
     sneaker3.classList.remove('sneaker1');
     sneaker4.classList.add('sneaker1');
 })
-document.querySelector('a')
-    .addEventListener('mouseover', () => { 
-const nav = document.querySelector('a');
-nav.style.marginTop = "26px";
-nav.style.borderBottom = "2px solid red";
-nav.style.paddingBottom = "25px";
-    }
-)
 
