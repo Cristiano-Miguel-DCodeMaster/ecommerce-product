@@ -38,7 +38,7 @@ main {
 }
 @font-face {
 	font-family: kumbh;
-	src: url(/fonts/KumbhSans[YOPQ\,wght].ttf);
+	src: url("/fonts/KumbhSans[YOPQ\,wght].ttf");
 }
 .that {
 	width: 100%;
@@ -172,7 +172,7 @@ main {
 	.bigimage {
 		width: 100%;
 		height: 50vh;
-		background-image: url(/images/image-product-1.webp);
+		background-image: url("../images/image-product-1.webp");
 		background-size: cover;
 	}
 	.sectas {
@@ -436,7 +436,7 @@ main {
 	.bigimage {
 		width: 100%;
 		height: 50vh;
-		background-image: url(/images/image-product-1.webp);
+		background-image: url("../images/image-product-1.webp");
 		background-size: cover;
 	}
 	.sectas {
